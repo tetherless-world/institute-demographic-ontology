@@ -109,7 +109,7 @@ a.sidebar-nav-item:focus {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
-    bottom: 1rem;
+	top:  20rem;
     left:   1rem;
   }
 }
@@ -247,4 +247,52 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .content a,
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
+}
+
+.collapsible {
+  background-color: #aa759f;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: inherit;
+  outline: none;
+  font-size: inherit;
+  padding-left:0;
+}
+
+.collapsible .sidebar-nav-item {
+  display:inline;
+}
+
+.active, .collapsible:hover {
+  background-color: #aa759f;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.button-content {
+  padding: 0 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #fde6ea;
+}
+
+.button-content a {
+  color:purple;
+}
+
+.button-content li {
+  color:purple;
+  list-style-type:disc;
 }
