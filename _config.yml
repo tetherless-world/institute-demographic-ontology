@@ -1,0 +1,23 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Institute Demographic Ontology (InDO)
+url:               https://tetherless-world.github.io/
+baseurl:          https://tetherless-world.github.io/institute-demographic-ontology/
+
+author:
+  name:           'Mark Otto'
+  url:            https://twitter.com/mdo
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://tetherless-world.github.io/institute-demographic-ontology/
