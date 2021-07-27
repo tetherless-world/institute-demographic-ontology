@@ -57,7 +57,7 @@ WHERE {
   }
 
       </pre></li>
-      <li><strong>Response</strong> <br/>
+      <li><strong>Response</strong> <br>
   <table>
 <thead>
   <tr>
@@ -129,5 +129,4 @@ WHERE {
   </li>
   
 </ol>
-
   </content>
