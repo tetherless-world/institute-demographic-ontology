@@ -39,94 +39,24 @@ title: Competency Questions
   <ul type = "circle">
     <li> <strong>Query:</strong> <br/>
       <pre>
-prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>
-prefix owl:<http://www.w3.org/2002/07/owl#>
 prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
 prefix sio:<http://semanticscience.org/resource/>
-prefix prov: <http://www.w3.org/ns/prov#>
 
-SELECT ?Year ?DoctoralRecipients ?NSFTable
+SELECT DISTINCT ?Year ?DoctoralRecipients ?NSFTable
 WHERE {
   indo:Year ?p ?o .
   ?s rdf:type indo:Year .
   ?s sio:SIO_000300 ?Year .
   ?s indo:hadDoctoralRecipients ?b .
   ?b sio:SIO_000300 ?DoctoralRecipients .
-  ?b indo:hasPart ?c .
-  ?c sio:SIO_000300 ?NSFTable .
+  ?c indo:hasPart ?b .
+  ?c rdfs:label ?NSFTable .
+  FILTER ((?Year >1959 && ?Year <1963) || (?Year >2015 && ?Year <2020))
   }
 
-      </pre></li>
-      <li><strong>Response</strong> <br>
-  <table>
-<thead>
-  <tr>
-    <th>Year</th>
-    <th>DoctoralRecipients</th>
-    <th>NSFTable</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>1958</td>
-    <td>8773</td>
-    <td>NSF_Table1_DoctoralRecipients<br>USUniversities2019</td>
-  </tr>
-  <tr>
-    <td>1959</td>
-    <td>9213</td>
-    <td>NSF_Table1_DoctoralRecipients<br>USUniversities2019</td>
-  </tr>
-  <tr>
-    <td>1960</td>
-    <td>9722</td>
-    <td>NSF_Table1_DoctoralRecipients<br>USUniversities2019</td>
-  </tr>
-  <tr>
-    <td>1961</td>
-    <td>10413</td>
-    <td>NSF_Table1_DoctoralRecipients<br>USUniversities2019</td>
-  </tr>
-  <tr>
-    <td>1962/td>
-    <td>11500</td>
-    <td>NSF_Table1_DoctoralRecipients<br>USUniversities2019</td>
-  </tr>
-  <tr>
-    <td>........</td>
-    <td>..........</td>
-    <td>.........................................</td>
-  </tr>
-  <tr>
-    <td>2015</td>
-    <td>54886</td>
-    <td>NSF_Table1_DoctoralRecipients<br>USUniversities2019</td>
-  </tr>
-  <tr>
-    <td>2016</td>
-    <td>54809</td>
-    <td>NSF_Table1_DoctoralRecipients<br>USUniversities2019</td>
-  </tr>
-  <tr>
-    <td>2017</td>
-    <td>54554</td>
-    <td>NSF_Table1_DoctoralRecipients<br>USUniversities2019</td>
-  </tr>
-  <tr>
-    <td>2018</td>
-    <td>55103</td>
-    <td>NSF_Table1_DoctoralRecipients<br>USUniversities2019</td>
-  </tr>
-  <tr>
-    <td>2019</td>
-    <td>55703</td>
-    <td>NSF_Table1_DoctoralRecipients<br>USUniversities2019</td>
-  </tr>
-</tbody>
-</table>
-  </li>
+      </pre>
+	 </li>
   </ul>
-  </li>
-  
+  </li>  
 </ol>
-  </content>
+</content>
