@@ -35,7 +35,7 @@ title: Competency Questions
 
 <h3 id="sparql">SPARQL Queries</h3>
 <ol>
-  <li id="question1"><strong>Total doctoral recipients from US Universities from 1958 and the source?</strong>
+  <li id="question1"><strong>Total doctoral recipients from US Universities from 1959-1962 and 2016 to 2019 and the source?</strong>
   <ul type = "circle">
     <li> <strong>Query:</strong> <br/>
       <pre>
@@ -59,4 +59,8 @@ WHERE {
   </ul>
   </li>  
 </ol>
+
+<img src ="../images/QUERY1RESULTS.png" style="width:100%; height:100%">  
+ <caption>Blazegraph Workbench Output for the above query</caption>  
+  
 </content>
