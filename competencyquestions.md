@@ -53,14 +53,13 @@ WHERE {
   ?c rdfs:label ?NSFTable .
   FILTER ((?Year >1959 && ?Year <1963) || (?Year >2015 && ?Year <2020))
   }
-
       </pre>
 	 </li>
   </ul>
+  <img src ="../images/QUERY1RESULTS.png" style="width:100%; height:100%">  
+ <caption>Fig 1. Blazegraph Workbench Output for the Query 1</caption>  
   </li>  
 </ol>
 
-<img src ="../images/QUERY1RESULTS.png" style="width:100%; height:100%">  
- <caption>Blazegraph Workbench Output for the above query</caption>  
   
 </content>
