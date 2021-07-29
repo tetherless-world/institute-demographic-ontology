@@ -59,7 +59,7 @@ WHERE {
   <img src ="../images/QUERY1RESULTS.png" style="width:100%; height:100%">  
  <caption>Fig 1. Blazegraph Workbench Output for the Query 1</caption>  
   </li>  
-  <li> </li>
+<br><br>
   
   <li id="question2"><strong>Institute with maximum doctoral recipient in US in 2019?</strong>
   <ul type = "circle">
@@ -84,7 +84,7 @@ WHERE{
  <img src ="../images/cQUERY2RESULT.png" style="width:100%; height:100%">  
  <caption>Fig 2. Blazegraph Workbench Output for the Query 2</caption> 
   </li>  
-   <li> </li>
+  <br><br>
    
   <li id="question3"><strong>How many female doctoral recipients in 2019 were from University of California Berkeley, in Mathematics and Computer Science graduate program?</strong>
   <ul type = "circle">
@@ -112,7 +112,7 @@ WHERE{
  <img src ="../images/cQUERY3RESULTS.png" style="width:100%; height:100%">  
  <caption>Fig 3. Blazegraph Workbench Output for the Query 3 part of NSF 2019 Doctoral Recipients Survey Results Table 3 </caption> 
   </li>  
-  <li> </li>
+<br><br>
    
   <li id="question4"><strong>how many female doctoral recipients in 2019 were from University of California Berkeley, in Mathematics and Computer Science graduate program?</strong>
   <ul type = "circle">
