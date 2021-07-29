@@ -81,8 +81,35 @@ WHERE{
 	 </li>
   </ul>
  <img src ="../images/cQUERY2RESULT.png" style="width:100%; height:100%">  
- <caption>Fig 1. Blazegraph Workbench Output for the Query 1</caption> 
+ <caption>Fig 2. Blazegraph Workbench Output for the Query 2</caption> 
   </li>  
+  
+  <li id="question2"><strong>Provide the number of female doctoral recipients from institutes in California.</strong>
+  <ul type = "circle">
+    <li> <strong>Query:</strong> <br/>
+      <pre>
+prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
+prefix sio:<http://semanticscience.org/resource/>
+
+SELECT DISTINCT ?Institute ?TotalDoctoralRecipients ?Female 
+WHERE{ 
+  ?i rdf:type indo:Institute.
+  ?i indo:inState ?s .
+  ?i indo:name ?Institute .
+  ?i indo:hadDoctoralRecipients ?v.
+  ?v sio:SIO_000300 ?TotalDoctoralRecipients .
+  ?i indo:hasDemographics ?d .
+  ?d rdf:type indo:Female.
+  ?d sio:SIO_000300 ?Female .  
+  Filter(?s= "California") 
+}
+      </pre>
+	 </li>
+  </ul>
+ <img src ="../images/cQUERY3RESULTS.png" style="width:100%; height:100%">  
+ <caption>Fig 3. Blazegraph Workbench Output for the Query 3</caption> 
+  </li>  
+  
 </ol>
 
   
