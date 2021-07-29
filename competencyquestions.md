@@ -59,6 +59,7 @@ WHERE {
   <img src ="../images/QUERY1RESULTS.png" style="width:100%; height:100%">  
  <caption>Fig 1. Blazegraph Workbench Output for the Query 1</caption>  
   </li>  
+  <li> </li>
   
   <li id="question2"><strong>Institute with maximum doctoral recipient in US in 2019?</strong>
   <ul type = "circle">
@@ -83,31 +84,62 @@ WHERE{
  <img src ="../images/cQUERY2RESULT.png" style="width:100%; height:100%">  
  <caption>Fig 2. Blazegraph Workbench Output for the Query 2</caption> 
   </li>  
-  
-  <li id="question2"><strong>Provide the number of female doctoral recipients from institutes in California.</strong>
+   <li> </li>
+   
+  <li id="question3"><strong>How many female doctoral recipients in 2019 were from University of California Berkeley, in Mathematics and Computer Science graduate program?</strong>
   <ul type = "circle">
     <li> <strong>Query:</strong> <br/>
       <pre>
 prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
 prefix sio:<http://semanticscience.org/resource/>
 
-SELECT DISTINCT ?Institute ?TotalDoctoralRecipients ?Female 
+SELECT DISTINCT ?Institute ?OfferedDegree ?TotalInDegree ?FemaleInDegree
 WHERE{ 
   ?i rdf:type indo:Institute.
-  ?i indo:inState ?s .
-  ?i indo:name ?Institute .
   ?i indo:hadDoctoralRecipients ?v.
-  ?v sio:SIO_000300 ?TotalDoctoralRecipients .
-  ?i indo:hasDemographics ?d .
-  ?d rdf:type indo:Female.
-  ?d sio:SIO_000300 ?Female .  
-  Filter(?s= "California") 
+  ?i indo:name ?Institute .
+  ?i indo:offersGradDegreeIn ?g .
+  ?g indo:name ?OfferedDegree .
+  ?g sio:SIO_000300 ?TotalInDegree .
+  ?g indo:hasDemographics ?d .
+  ?d rdf:type indo:Female .
+  ?d sio:SIO_000300 ?FemaleInDegree .
+  FILTER (?Institute = "UniversityOfCaliforniaBerkeley" && ?OfferedDegree = "MathematicsAndComputerScience")  
 }
       </pre>
 	 </li>
   </ul>
  <img src ="../images/cQUERY3RESULTS.png" style="width:100%; height:100%">  
- <caption>Fig 3. Blazegraph Workbench Output for the Query 3</caption> 
+ <caption>Fig 3. Blazegraph Workbench Output for the Query 3 part of NSF 2019 Doctoral Recipients Survey Results Table 3 </caption> 
+  </li>  
+  <li> </li>
+   
+  <li id="question4"><strong>how many female doctoral recipients in 2019 were from University of California Berkeley, in Mathematics and Computer Science graduate program?</strong>
+  <ul type = "circle">
+    <li> <strong>Query:</strong> <br/>
+      <pre>
+prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
+prefix sio:<http://semanticscience.org/resource/>
+
+SELECT DISTINCT ?Institute ?TotDocRec ?OfferedDegree ?TotalInDegree ?FemaleInDegree
+WHERE{ 
+  ?i rdf:type indo:Institute.
+  ?i indo:hadDoctoralRecipients ?v.
+  ?v sio:SIO_000300 ?TotDocRec .
+  ?i indo:name ?Institute .
+  ?i indo:offersGradDegreeIn ?g .
+  ?g indo:name ?OfferedDegree .
+  ?g sio:SIO_000300 ?TotalInDegree .
+  ?g indo:hasDemographics ?d .
+  ?d rdf:type indo:Female .
+  ?d sio:SIO_000300 ?FemaleInDegree .
+  FILTER (?Institute = "UniversityOfCaliforniaBerkeley" && ?OfferedDegree = "MathematicsAndComputerScience")  
+}
+      </pre>
+	 </li>
+  </ul>
+ <img src ="../images/cQUERY4RESULTS.png" style="width:100%; height:100%">  
+ <caption>Fig 4. Blazegraph Workbench Output for the Query 4. Combined data points frompart of NSF 2019 Doctoral Recipients Survey Results Table 3 and 4.</caption> 
   </li>  
   
 </ol>
