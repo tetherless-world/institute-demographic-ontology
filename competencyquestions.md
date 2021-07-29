@@ -59,6 +59,44 @@ WHERE {
   <img src ="../images/QUERY1RESULTS.png" style="width:100%; height:100%">  
  <caption>Fig 1. Blazegraph Workbench Output for the Query 1</caption>  
   </li>  
+  
+  <li id="question2"><strong>Institute with maximum doctoral recipient in US in 2019?</strong>
+  <ul type = "circle">
+    <li> <strong>Query:</strong> <br/>
+      <pre>
+prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
+prefix sio:<http://semanticscience.org/resource/>
+
+SELECT DISTINCT ?Institute ?Rank ?TotalDoctoralRecipients
+WHERE{
+  ?s rdf:type indo:Institute.
+  ?s indo:hasDoctoralRecipientsRankBySex ?o .
+  ?s indo:name ?Institute.
+  ?o sio:SIO_000300 ?Rank .
+  ?s indo:hadDoctoralRecipients ?v.
+  ?v sio:SIO_000300 ?TotalDoctoralRecipients .
+  Filter(?Rank=1)
+}
+      </pre>
+	 </li>
+  </ul>
+ <table>
+ <thead>
+ <tr>
+      <th>Institute</th>
+	  <th>Rank</th>
+	  <th>TotalDoctoralRecipients</th>
+ </tr>
+ </thead>
+ <tbody>
+   <tr>
+        <td>UniversityOfCaliforniaBerkeley</td>
+		<td>1</td>
+		<td>864</td>
+   </tr>
+ </tbody>
+ </table>
+  </li>  
 </ol>
 
   
