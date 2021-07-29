@@ -80,22 +80,8 @@ WHERE{
       </pre>
 	 </li>
   </ul>
- <table>
- <thead>
- <tr>
-      <th>Institute</th>
-	  <th>Rank</th>
-	  <th>TotalDoctoralRecipients</th>
- </tr>
- </thead>
- <tbody>
-   <tr>
-        <td>UniversityOfCaliforniaBerkeley</td>
-		<td>1</td>
-		<td>864</td>
-   </tr>
- </tbody>
- </table>
+ <img src ="../images/cQUERY2RESULT.png" style="width:100%; height:100%">  
+ <caption>Fig 1. Blazegraph Workbench Output for the Query 1</caption> 
   </li>  
 </ol>
 
