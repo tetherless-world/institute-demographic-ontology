@@ -30,13 +30,18 @@ title: Competency Questions
     <td><a href="#question3">(Q3).</a>Number of <marginalized community> doctoral recipients from institutes at a given location. <br>For example, provide the number of female doctoral recipients from institutes in California.</td>
     <td>Name of doctoral granting institutes at the provided location. <br>Total doctoral recipients from those institutes for year 2019. <br>Number of those students from the required marginalized community. <br>Source of information can also be provided. </td>
   </tr>
-    <tr>
+  <tr>
     <td><a href="#question4">(Q4).</a>Institute with maximum doctoral student in a given field of study. How many of those were from their marginalized community? <br> For example, how many female doctoral recipients in 2019 were from University of California Berkeley, in Mathematics and Computer Science graduate program?</td>
     <td>Institute's name with maximum doctoral recipient from the required field of study. <br>The number of total doctoral recipient and doctorates from that field. <br>The number of students from the required marginalized community in the field of study. <br>This query integrates datapoints from multiple NSF tables and the source of information can be provided.</td>
   </tr>
+  <tr>
+    <td><a href="#question5">(Q5).</a>What is the <marginalized group> doctoral recipients percentage from a particular institute or its program in a given year? (response provided rounded of to nearest integer). <br> For example, what was the percentage of female doctoral recipients from Walden University in 2019?</td>
+	<td>Institute's name, overall total doctoral recipient from the institute or from its mentioned programs. <br>Number of these doctoral recipients from the required marginalized community and the percentage (currently nearest integer). <br>The source of information can also be extracted.  </td>
+  </tr>
 </tbody>
 </table>
-<br>
+
+
 <h3 id="sparql">SPARQL Queries</h3>
 <ol>
   <li id="question1"><strong>Total doctoral recipients from US Universities from 1959-1962 and 2016 to 2019 and the source?</strong>
@@ -144,6 +149,60 @@ WHERE{
   </ul>
  <img src ="../images/cQUERY4RESULTS.png" style="width:100%; height:100%">  
  <caption>Fig 4. Blazegraph Workbench Output for the Query 4. Combined data points frompart of NSF 2019 Doctoral Recipients Survey Results Table 3 and 4.</caption> 
+  </li>  
+  <br><br>
+  
+  <li id="question2"><strong>Institute with maximum doctoral recipient in US in 2019?</strong>
+  <ul type = "circle">
+    <li> <strong>Query:</strong> <br/>
+      <pre>
+prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
+prefix sio:<http://semanticscience.org/resource/>
+
+SELECT DISTINCT ?Institute ?Rank ?TotalDoctoralRecipients
+WHERE{
+  ?s rdf:type indo:Institute.
+  ?s indo:hasDoctoralRecipientsRankBySex ?o .
+  ?s indo:name ?Institute.
+  ?o sio:SIO_000300 ?Rank .
+  ?s indo:hadDoctoralRecipients ?v.
+  ?v sio:SIO_000300 ?TotalDoctoralRecipients .
+  Filter(?Rank=1)
+}
+      </pre>
+	 </li>
+  </ul>
+ <img src ="../images/cQUERY2RESULT.png" style="width:100%; height:100%">  
+ <caption>Fig 2. Blazegraph Workbench Output for the Query 2</caption> 
+  </li>  
+  <br><br>
+   
+  <li id="question5"><strong>What was the percentage of female doctoral recipients from Walden University in 2019?</strong>
+  <ul type = "circle">
+    <li> <strong>Query:</strong> <br/>
+      <pre>
+			prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
+			prefix sio:<http://semanticscience.org/resource/>
+
+			SELECT DISTINCT ?Institute ?TotDocRec?FemaleInDegree ?PerFemaleDR
+			WHERE{ 
+			  BIND (xsd:integer((?FemaleInDegree/?TotDocRec)*100) AS ?PerFemaleDR) .
+			  ?i rdf:type indo:Institute.
+			  ?i indo:hadDoctoralRecipients ?v.
+			  ?i indo:name ?Institute .
+			  ?i indo:hadDoctoralRecipients ?dr .
+			  ?dr sio:SIO_000300 ?TotDocRec .
+			  ?i indo:hasDemographics ?d .
+			  ?d rdf:type indo:Female .
+			  ?d sio:SIO_000300 ?FemaleInDegree .
+			  FILTER (?Institute = "WaldenUniversity")
+			  
+			}
+      </pre>
+	 </li>
+  </ul>
+ <img src ="../images/cQUERY5RESULTS.png" style="width:100%; height:100%">  
+ <caption>Fig 5. Blazegraph Workbench Output for the Query 5 part of NSF 2019 Doctoral Recipients Survey Results Table 3 </caption> 
   </li>  
   
 </ol>
