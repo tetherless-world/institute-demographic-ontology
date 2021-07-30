@@ -30,7 +30,10 @@ title: Competency Questions
     <td><a href="#question3">(Q3).</a>Number of <marginalized community> doctoral recipients from institutes at a given location. <br>For example, provide the number of female doctoral recipients from institutes in California.</td>
     <td>Name of doctoral granting institutes at the provided location. <br>Total doctoral recipients from those institutes for year 2019. <br>Number of those students from the required marginalized community. <br>Source of information can also be provided. </td>
   </tr>
-
+    <tr>
+    <td><a href="#question4">(Q4).</a>Institute with maximum doctoral student in a given field of study. How many of those were from their marginalized community? <br> For example, how many female doctoral recipients in 2019 were from University of California Berkeley, in Mathematics and Computer Science graduate program?</td>
+    <td>Institute's name with maximum doctoral recipient from the required field of study. <br>The number of total doctoral recipient and doctorates from that field. <br>The number of students from teh required marginalized community in the field of study. <br>This query integrates datapoints from multiple NSF tables and the source of information can be provided.</td>
+  </tr>
 </tbody>
 </table>
 <br>
