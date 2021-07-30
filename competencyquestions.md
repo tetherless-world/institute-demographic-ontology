@@ -19,16 +19,20 @@ title: Competency Questions
 </thead>
 <tbody>
   <tr>
-    <td><a href="#question1">(Q1).</a> How many doctorar recipients were their in a given yearfrom US institutes. <br> Example,Year wise doctoral recipients in the United States of America for year range 1958-2019 </td>
-    <td>The entire NSF doctoral recepients survey 2019 Table 1 data points</td>
+    <td><a href="#question1">(Q1).</a>A given year's total doctoral recipients from US institutes between 1958 and 2019. <br> For example, How many total doctoral recipients were there between years 1960-62 and 2016-19 from US institutes?  </td>
+    <td>The number of doctoral recipients for the provided years. The information source is also available.</td>
   </tr>
   <tr>
-    <td><a href="#question2">(Q2).</a> Institute with maximum doctoral recipients in 2019. Its location. <br>How many of those were males and females. <br>What is the source of the information</td>
-    <td>Name and location of the institute with maximum doctoral recipient for 2019<br> Number of Males and Females comprising the total number of doctoral recipients from that institute<br>Provenance - the NSF Doctoral Recipients Survey Table number and title</td>
+    <td><a href="#question2">(Q2).</a>Which US institute graduated maximum doctorates in a given year? What is the binary gender representation of those students? <br> For example, US Institute with maximum doctoral recipient in 2019 and how many of them were females? </td>
+    <td>The institute's name with highest number of doctoral recipients. <br>The number of institiute's doctoral recipients from the required binary gender.</td>
   </tr>
   <tr>
-    <td><a href="#question2">(Q3).</a>Institute with maximum doctoral student in a given field of study (example Life Science). <br> It's location. How many of those were males and how many of those were females</td>
-    <td>The name and location of the institute with maximum doctoral recipient in the given field (say Life Science),<br> the number of males and females graduated from the institute in the given field.</td>
+    <td><a href="#question3">(Q3).</a>Number of <marginalized community> doctoral recipients from institutes at a given location. <br>For example, provide the number of female doctoral recipients from institutes in California.</td>
+    <td>Name of doctoral granting institutes at the provided location. <br>Total doctoral recipients from those institutes for year 2019. <br>Number of those students from the required marginalized community. <br>Source of information can also be provided. </td>
+  </tr>
+  <tr>
+    <td><a href="#question4">(Q4).</a>Institute with maximum doctoral student in a given field of study. How many of those were from their marginalized community? <br> For example, how many female doctoral recipients in 2019 were from University of California Berkeley, in Mathematics and Computer Science graduate program?</td>
+    <td>Institute's name with maximum doctoral recipient from the required field of study. <br>The number of total doctoral recipient and doctorates from that field. <br>The number of students from teh required marginalized community in the field of study. <br>This query integrates datapoints from multiple NSF tables and the source of information can be provided.</td>
   </tr>
 </tbody>
 </table>
@@ -114,7 +118,7 @@ WHERE{
   </li>  
 <br><br>
    
-  <li id="question4"><strong>how many female doctoral recipients in 2019 were from University of California Berkeley, in Mathematics and Computer Science graduate program?</strong>
+  <li id="question4"><strong>How many female doctoral recipients in 2019 were from University of California Berkeley, in Mathematics and Computer Science graduate program?</strong>
   <ul type = "circle">
     <li> <strong>Query:</strong> <br/>
       <pre>
