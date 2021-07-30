@@ -36,7 +36,7 @@ title: Competency Questions
   </tr>
 </tbody>
 </table>
-
+<br>
 <h3 id="sparql">SPARQL Queries</h3>
 <ol>
   <li id="question1"><strong>Total doctoral recipients from US Universities from 1959-1962 and 2016 to 2019 and the source?</strong>

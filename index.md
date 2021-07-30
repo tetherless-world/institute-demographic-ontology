@@ -63,7 +63,7 @@ title: Institute Demographic Ontology (InDO)
   
 <h2>Tools Used during Development</h2>
   <ul>
-  <li>Ontology Editor: <a href="https://protege.stanford.edu/products.php#desktop-protege">Protege 5.5.0</a></li>
+  <li>Ontology Editor: <a href="https://protege.stanford.edu/products.php#desktop-protege">Protégé 5.5.0</a></li>
   <li>SPARQL Queries ran on <a href="http://sparql.cancerdata.org/#splash">Blazegraph Workbench</a></li>
   <li>RDF Visualization generated with <a href="http://jimmccusker.github.io/rdfviewer/">RDFViewer</a></li>
   </ul>
