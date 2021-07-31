@@ -25,7 +25,7 @@ title: Competency Questions
     <td>The institute's name with highest number of doctoral recipients. <br>The number of institiute's doctoral recipients from the required binary gender.</td>
   </tr>
   <tr>
-    <td><a href="#question3">(Q3).</a>Number of <marginalized community> doctoral recipients from institutes at a given location. <br>For example, provide the number of female doctoral recipients from institutes in California.</td>
+    <td><a href="#question3">(Q3).</a>Number of &lt;marginalized community&gt; doctoral recipients from institutes at a given location. <br>For example, provide the number of female doctoral recipients from institutes in California.</td>
     <td>Name of doctoral granting institutes at the provided location. <br>Total doctoral recipients from those institutes for year 2019. <br>Number of those students from the required marginalized community. <br>Source of information can also be provided. </td>
   </tr>
   <tr>
@@ -33,7 +33,7 @@ title: Competency Questions
     <td>Institute's name with maximum doctoral recipient from the required field of study. <br>The number of total doctoral recipient and doctorates from that field. <br>The number of students from the required marginalized community in the field of study. <br>This query integrates datapoints from multiple NSF tables and the source of information can be provided.</td>
   </tr>
   <tr>
-    <td><a href="#question5">(Q5).</a>What is the <marginalized group> doctoral recipients percentage from a particular institute or its program in a given year? (response provided rounded of to nearest integer). <br> For example, what was the percentage of female doctoral recipients from Walden University in 2019?</td>
+    <td><a href="#question5">(Q5).</a>What is the &lt;marginalized group&gt; doctoral recipients percentage from a particular institute or its program in a given year? (response provided rounded of to nearest integer). <br> For example, what was the percentage of female doctoral recipients from Walden University in 2019?</td>
 	<td>Institute's name, overall total doctoral recipient from the institute or from its mentioned programs. <br>Number of these doctoral recipients from the required marginalized community and the percentage (currently nearest integer). <br>The source of information can also be extracted.  </td>
   </tr>
 </tbody>
