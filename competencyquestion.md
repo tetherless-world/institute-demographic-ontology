@@ -8,7 +8,7 @@ title: Competency Questions
 
 <content>
 <ol>
-<li id="#question1">(Q1).<strong>General</strong>: A given year's total doctoral recipients from US institutes between 1958 and 2019. 
+<li id="#question1"><strong>General</strong>: A given year's total doctoral recipients from US institutes between 1958 and 2019. 
 <ul type = "circle">
 <li><strong>Example</strong>: How many total doctoral recipients were there from 1960-62 and 2016-19 from US institutes?
 <pre>
@@ -36,7 +36,7 @@ FILTER ((?Year >1959 && ?Year <1963) || (?Year >2015 && ?Year <2020))
 </li>
 <hr>	
 	
-<li id="#question2">(Q2).<strong>General</strong>: US institute that graduated the most doctorates in a given year and the binary gender representation of those students.
+<li><strong id="#question2">General</strong>: US institute that graduated the most doctorates in a given year and the binary gender representation of those students.
 <ul type = "circle">
 <li><strong>Example</strong>: What is the US Institute with the maximum doctoral recipients in 2019 and how many of them were females?
 <pre>
@@ -63,7 +63,7 @@ Filter(?Rank=1)
 </li>
 <hr>
 
-<li id="#question3">(Q3).<strong>General</strong>: Number of <marginalized community> doctoral recipients from institutes at a given location. 
+<li id="#question3"><strong>General</strong>: Number of <marginalized community> doctoral recipients from institutes at a given location. 
 <ul type = "circle">
 <li><strong>Example</strong>: Provide the number of female doctoral recipients from institutes in California.
 <pre>
@@ -93,7 +93,7 @@ FILTER (?Institute = "UniversityOfCaliforniaBerkeley" && ?OfferedDegree = "Mathe
 </li>
 <hr>
 
-<li id="#question4">(Q4).<strong>General</strong>: Institute with the most doctoral students in a given field of study. How many of those were from their marginalized community?
+<li id="#question4"><strong>General</strong>: Institute with the most doctoral students in a given field of study. How many of those were from their marginalized community?
 <ul type = "circle">
 <li><strong>Example</strong>: How many female doctoral recipients in 2019 were from University of California Berkeley, in Mathematics and Computer Science graduate program?
 <pre>
@@ -124,7 +124,7 @@ FILTER (?Institute = "UniversityOfCaliforniaBerkeley" && ?OfferedDegree = "Mathe
 </li>
 <hr>
 
-<li id="#question5">(Q5).<strong>General</strong>: The percentage of <marginalized group> doctoral recipients in a particular program or the institute in a given year? (response provided rounded of to nearest integer). This could also be used to compare the <marginalized community> percentages among programs or institutes.
+<li><strong id="#question5">General</strong>: The percentage of <marginalized group> doctoral recipients in a particular program or the institute in a given year? (response provided rounded of to nearest integer). This could also be used to compare the <marginalized community> percentages among programs or institutes.
 <ul type = "circle">
 <li><strong>Example</strong>: What was the percentage of female doctoral recipients from University of California, Berkeley and Walden University in 2019? 
 <pre>
