@@ -8,7 +8,7 @@ title: Competency Questions
 
 <content>
 <ol>
-<li> <id="#question1">(Q1).<strong>General</strong>: A given year's total doctoral recipients from US institutes between 1958 and 2019. 
+<li id="#question1">(Q1).<strong>General</strong>: A given year's total doctoral recipients from US institutes between 1958 and 2019. 
 <ul type = "circle">
 <li><strong>Example</strong>: How many total doctoral recipients were there from 1960-62 and 2016-19 from US institutes?
 <pre>
@@ -36,7 +36,7 @@ FILTER ((?Year >1959 && ?Year <1963) || (?Year >2015 && ?Year <2020))
 </li>
 <hr>	
 	
-<li> <id="#question2">(Q2).<strong>General</strong>: US institute that graduated the most doctorates in a given year and the binary gender representation of those students.
+<li id="#question2">(Q2).<strong>General</strong>: US institute that graduated the most doctorates in a given year and the binary gender representation of those students.
 <ul type = "circle">
 <li><strong>Example</strong>: What is the US Institute with the maximum doctoral recipients in 2019 and how many of them were females?
 <pre>
@@ -63,7 +63,7 @@ Filter(?Rank=1)
 </li>
 <hr>
 
-<li id="#question3">(Q3). <strong>General</strong>: Number of <marginalized community> doctoral recipients from institutes at a given location.
+<li id="#question3">(Q3).<strong>General</strong>: Number of <marginalized community> doctoral recipients from institutes at a given location. 
 <ul type = "circle">
 <li><strong>Example</strong>: Provide the number of female doctoral recipients from institutes in California.
 <pre>
@@ -123,6 +123,36 @@ FILTER (?Institute = "UniversityOfCaliforniaBerkeley" && ?OfferedDegree = "Mathe
 </figure>
 </li>
 <hr>
+
+<li id="#question5">(Q5).<strong>General</strong>: The percentage of <marginalized group> doctoral recipients in a particular program or the institute in a given year? (response provided rounded of to nearest integer). This could also be used to compare the <marginalized community> percentages among programs or institutes.
+<ul type = "circle">
+<li><strong>Example</strong>: What was the percentage of female doctoral recipients from University of California, Berkeley and Walden University in 2019? 
+<pre>
+prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
+prefix sio:<http://semanticscience.org/resource/>
+
+SELECT DISTINCT ?Institute ?TotDocRec?FemaleInDegree ?PerFemaleDR
+WHERE{ 
+BIND (xsd:integer((?FemaleInDegree/?TotDocRec)*100) AS ?PerFemaleDR) .
+?i rdf:type indo:Institute.
+?i indo:hadDoctoralRecipients ?v.
+?i indo:name ?Institute .
+?i indo:hadDoctoralRecipients ?dr .
+?dr sio:SIO_000300 ?TotDocRec .
+?i indo:hasDemographics ?d .
+?d rdf:type indo:Female .
+?d sio:SIO_000300 ?FemaleInDegree .
+FILTER (?Institute = "WaldenUniversity")
+}
+</pre>
+</li>
+</ul> 
+<figure>
+<img src ="../images/cQUERY5RESULTS.png" style="width:100%; height:100%">  
+<figcaption>Fig 5. Blazegraph Workbench Output for the Query 5 part of NSF 2019 Doctoral Recipients Survey Results Table 3 </figcaption>  
+</figure>
+</li>
+<hr>	
 
 </ol>
 
