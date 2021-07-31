@@ -2,7 +2,7 @@
 layout: default
 title: Competency Questions
 ---
-[Competency Question 1](#question1) | [Competency Question 2](#question2) | [Competency Question 3](#question3) | [Competency Question 4](#question4)
+[Competency Question 1](#question1) | [Competency Question 2](#question2) | [Competency Question 3](#question3) | [Competency Question 4](#question4) | [Competency Question 5](#question5)
 
 <article class="mb-5" id="competencyquestions">
 
