@@ -65,8 +65,10 @@ WHERE {
       </pre>
 	 </li>
   </ul>
+  <figure>
   <img src ="../images/QUERY1RESULTS.png" style="width:100%; height:100%">  
- <caption>Fig 1. Blazegraph Workbench Output for the Query 1</caption>  
+  <figcaption>Fig 1. Blazegraph Workbench Output for the Query 1</figcaption>  
+  </figure>
   </li>  
 <br><br>
   
