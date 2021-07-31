@@ -5,8 +5,6 @@ title: Competency Questions
 [Questions](#competencyquestions) | [SPARQL Queries](#sparql) 
 
 <article class="mb-5" id="competencyquestions">
-<content>
-  
   
 <h2>Example of Competency Questions</h2>
   <p>We have crafted a set of competency questions to demonstrate the use of our ontology for aspiring graduate students or someone who would want to use our system for understanding an institute's doctoral recipients demographics. We first present a table of our competency question list and the corresponding candidate responses. We then present SPARQL query implementations for these questions.</p>
@@ -218,5 +216,3 @@ WHERE{
   
 </ol>
 
-  
-</content>
