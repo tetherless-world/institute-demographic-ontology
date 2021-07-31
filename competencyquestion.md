@@ -4,9 +4,10 @@ title: Competency Questions
 ---
 [Competency Question 1](#question1) | [Competency Question 2](#question2) | [Competency Question 3](#question3) | [Competency Question 4](#question4) | [Competency Question 5](#question5)
 
-<article class="mb-5" id="question1">
+<article class="mb-5" id="competencyquestion">
 
 <content>
+  <h2 id="question1">Competency Question 1</h2>
 <ul>
 <li><strong>General</strong>: A given year's total doctoral recipients from US institutes between 1958 and 2019. 
 <ul type = "circle">
@@ -41,6 +42,7 @@ FILTER ((?Year >1959 && ?Year <1963) || (?Year >2015 && ?Year <2020))
 <article class="mb-5" id="question2">
 
 <content>
+ <h2 id="question2">Competency Question 2</h2>
 <ul>
 <li><strong>General</strong>: US institute that graduated the most doctorates in a given year and the binary gender representation of those students.
 <ul type = "circle">
@@ -74,6 +76,7 @@ Filter(?Rank=1)
 <article class="mb-5" id="question3">
 
 <content>
+  <h2 id="question3">Competency Question 3</h2>
 <ul>
 <li><strong>General</strong>: Number of <marginalized community> doctoral recipients from institutes at a given location. 
 <ul type = "circle">
@@ -110,6 +113,7 @@ FILTER (?Institute = "UniversityOfCaliforniaBerkeley" && ?OfferedDegree = "Mathe
 <article class="mb-5" id="question4">
 
 <content>
+  <h2 id="question4">Competency Question 4</h2>
 <ul>
 <li><strong>General</strong>: Institute with the most doctoral students in a given field of study. How many of those were from their marginalized community?
 <ul type = "circle">
@@ -147,6 +151,7 @@ FILTER (?Institute = "UniversityOfCaliforniaBerkeley" && ?OfferedDegree = "Mathe
 <article class="mb-5" id="question5">
 
 <content>
+  <h2 id="question5">Competency Question 5</h2>
 <ul>
 <li><strong>General</strong>: The percentage of <marginalized group> doctoral recipients in a particular program or the institute in a given year? (response provided rounded of to nearest integer). This could also be used to compare the <marginalized community> percentages among programs or institutes.
 <ul type = "circle">
