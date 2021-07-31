@@ -158,32 +158,7 @@ WHERE{
 
   </li>  
   <br><br>
-  
-  <li id="question2"><strong>Institute with maximum doctoral recipient in US in 2019?</strong>
-  <ul type = "circle">
-    <li> <strong>Query:</strong> <br/>
-      <pre>
-prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
-prefix sio:<http://semanticscience.org/resource/>
-
-SELECT DISTINCT ?Institute ?Rank ?TotalDoctoralRecipients
-WHERE{
-  ?s rdf:type indo:Institute.
-  ?s indo:hasDoctoralRecipientsRankBySex ?o .
-  ?s indo:name ?Institute.
-  ?o sio:SIO_000300 ?Rank .
-  ?s indo:hadDoctoralRecipients ?v.
-  ?v sio:SIO_000300 ?TotalDoctoralRecipients .
-  Filter(?Rank=1)
-}
-      </pre>
-	 </li>
-  </ul>
- <img src ="../images/cQUERY2RESULT.png" style="width:100%; height:100%">  
- <caption>Fig 2. Blazegraph Workbench Output for the Query 2</caption> 
-  </li>  
-  <br><br>
-   
+    
   <li id="question5"><strong>What was the percentage of female doctoral recipients from Walden University in 2019?</strong>
   <ul type = "circle">
     <li> <strong>Query:</strong> <br/>
