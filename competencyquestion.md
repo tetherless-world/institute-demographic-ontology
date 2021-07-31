@@ -2,13 +2,13 @@
 layout: default
 title: Competency Questions
 ---
-[Competency Question 1](#question1) | [Competency Question 2](#question2) | [Competency Question 3](#question3)
+[Competency Question 1](#question1) | [Competency Question 2](#question2) | [Competency Question 3](#question3) | [Competency Question 4](#question4)
 
 <article class="mb-5" id="competencyquestions">
 
 <content>
 <ol>
-<li id="#question1">(Q1).<strong>General</strong>: A given year's total doctoral recipients from US institutes between 1958 and 2019. 
+<li> <id="#question1">(Q1).<strong>General</strong>: A given year's total doctoral recipients from US institutes between 1958 and 2019. 
 <ul type = "circle">
 <li><strong>Example</strong>: How many total doctoral recipients were there from 1960-62 and 2016-19 from US institutes?
 <pre>
@@ -36,7 +36,7 @@ FILTER ((?Year >1959 && ?Year <1963) || (?Year >2015 && ?Year <2020))
 </li>
 <hr>	
 	
-<li id="#question2">(Q2).<strong>General</strong>: US institute that graduated the most doctorates in a given year and the binary gender representation of those students.
+<li> <id="#question2">(Q2).<strong>General</strong>: US institute that graduated the most doctorates in a given year and the binary gender representation of those students.
 <ul type = "circle">
 <li><strong>Example</strong>: What is the US Institute with the maximum doctoral recipients in 2019 and how many of them were females?
 <pre>
@@ -92,6 +92,38 @@ FILTER (?Institute = "UniversityOfCaliforniaBerkeley" && ?OfferedDegree = "Mathe
 </figure>
 </li>
 <hr>
+
+<li id="#question4">(Q4).<strong>General</strong>: Institute with the most doctoral students in a given field of study. How many of those were from their marginalized community?
+<ul type = "circle">
+<li><strong>Example</strong>: How many female doctoral recipients in 2019 were from University of California Berkeley, in Mathematics and Computer Science graduate program?
+<pre>
+prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
+prefix sio:<http://semanticscience.org/resource/>
+
+SELECT DISTINCT ?Institute ?TotDocRec ?OfferedDegree ?TotalInDegree ?FemaleInDegree
+WHERE{ 
+?i rdf:type indo:Institute.
+?i indo:hadDoctoralRecipients ?v.
+?v sio:SIO_000300 ?TotDocRec .
+?i indo:name ?Institute .
+?i indo:offersGradDegreeIn ?g .
+?g indo:name ?OfferedDegree .
+?g sio:SIO_000300 ?TotalInDegree .
+?g indo:hasDemographics ?d .
+?d rdf:type indo:Female .
+?d sio:SIO_000300 ?FemaleInDegree .
+FILTER (?Institute = "UniversityOfCaliforniaBerkeley" && ?OfferedDegree = "MathematicsAndComputerScience")  
+}
+</pre>
+</li>
+</ul> 
+<figure>
+<img src ="../images/cQUERY4RESULTS.png" style="width:100%; height:100%">  
+<figcaption>Fig 4. Blazegraph Workbench Output for the Query 4. Combined data points frompart of NSF 2019 Doctoral Recipients Survey Results Table 3 and 4.  </figcaption>
+</figure>
+</li>
+<hr>
+
 </ol>
 
 </content>
