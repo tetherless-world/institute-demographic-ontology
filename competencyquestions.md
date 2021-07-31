@@ -92,8 +92,10 @@ WHERE{
       </pre>
 	 </li>
   </ul>
+ <figure>
  <img src ="../images/cQUERY2RESULT.png" style="width:100%; height:100%">  
- <caption>Fig 2. Blazegraph Workbench Output for the Query 2</caption> 
+ <figcaption>Fig 2. Blazegraph Workbench Output for the Query 2</figcaption> 
+ </figure>
   </li>  
   <br><br>
    
@@ -120,8 +122,10 @@ WHERE{
       </pre>
 	 </li>
   </ul>
+ <figure>
  <img src ="../images/cQUERY3RESULTS.png" style="width:100%; height:100%">  
- <caption>Fig 3. Blazegraph Workbench Output for the Query 3 part of NSF 2019 Doctoral Recipients Survey Results Table 3 </caption> 
+ <figcaption>Fig 3. Blazegraph Workbench Output for the Query 3 part of NSF 2019 Doctoral Recipients Survey Results Table 3 </figcaption> 
+ </figure>
   </li>  
 <br><br>
    
@@ -149,8 +153,11 @@ WHERE{
       </pre>
 	 </li>
   </ul>
+ <figure>
  <img src ="../images/cQUERY4RESULTS.png" style="width:100%; height:100%">  
- <caption>Fig 4. Blazegraph Workbench Output for the Query 4. Combined data points frompart of NSF 2019 Doctoral Recipients Survey Results Table 3 and 4.</caption> 
+ <figcaption>Fig 4. Blazegraph Workbench Output for the Query 4. Combined data points frompart of NSF 2019 Doctoral Recipients Survey Results Table 3 and 4.  </figcaption>
+ </figure>
+
   </li>  
   <br><br>
   
@@ -203,8 +210,10 @@ WHERE{
       </pre>
 	 </li>
   </ul>
+ <figure>
  <img src ="../images/cQUERY5RESULTS.png" style="width:100%; height:100%">  
- <caption>Fig 5. Blazegraph Workbench Output for the Query 5 part of NSF 2019 Doctoral Recipients Survey Results Table 3 </caption> 
+ <figcaption>Fig 5. Blazegraph Workbench Output for the Query 5 part of NSF 2019 Doctoral Recipients Survey Results Table 3 </figcaption> 
+ </figure>
   </li>  
   
 </ol>
