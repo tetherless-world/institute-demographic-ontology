@@ -152,7 +152,6 @@ FILTER (?Institute = "WaldenUniversity")
 <figcaption>Fig 5. Blazegraph Workbench Output for the Query 5 part of NSF 2019 Doctoral Recipients Survey Results Table 3 </figcaption>  
 </figure>
 </li>
-<hr>	
 
 </ol>
 
