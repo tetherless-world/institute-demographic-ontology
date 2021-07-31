@@ -4,11 +4,11 @@ title: Competency Questions
 ---
 [Competency Question 1](#question1) | [Competency Question 2](#question2) | [Competency Question 3](#question3) | [Competency Question 4](#question4) | [Competency Question 5](#question5)
 
-<article class="mb-5" id="competencyquestions">
+<article class="mb-5" id="question1">
 
 <content>
-<ol>
-<li id="#question1"><strong>General</strong>: A given year's total doctoral recipients from US institutes between 1958 and 2019. 
+<ul>
+<li><strong>General</strong>: A given year's total doctoral recipients from US institutes between 1958 and 2019. 
 <ul type = "circle">
 <li><strong>Example</strong>: How many total doctoral recipients were there from 1960-62 and 2016-19 from US institutes?
 <pre>
@@ -34,9 +34,15 @@ FILTER ((?Year >1959 && ?Year <1963) || (?Year >2015 && ?Year <2020))
 <figcaption>Fig 1. Blazegraph Workbench Output for the Query 1</figcaption>  
 </figure>
 </li>
+</ul>
+</content>
 <hr>	
-	
-<li><strong id="#question2">General</strong>: US institute that graduated the most doctorates in a given year and the binary gender representation of those students.
+
+<article class="mb-5" id="question2">
+
+<content>
+<ul>
+<li><strong>General</strong>: US institute that graduated the most doctorates in a given year and the binary gender representation of those students.
 <ul type = "circle">
 <li><strong>Example</strong>: What is the US Institute with the maximum doctoral recipients in 2019 and how many of them were females?
 <pre>
@@ -61,9 +67,15 @@ Filter(?Rank=1)
 <figcaption>Fig 2. Blazegraph Workbench Output for the Query 2</figcaption> 
 </figure>
 </li>
+</ul>
+</content>
 <hr>
 
-<li id="#question3"><strong>General</strong>: Number of <marginalized community> doctoral recipients from institutes at a given location. 
+<article class="mb-5" id="question3">
+
+<content>
+<ul>
+<li><strong>General</strong>: Number of <marginalized community> doctoral recipients from institutes at a given location. 
 <ul type = "circle">
 <li><strong>Example</strong>: Provide the number of female doctoral recipients from institutes in California.
 <pre>
@@ -91,9 +103,15 @@ FILTER (?Institute = "UniversityOfCaliforniaBerkeley" && ?OfferedDegree = "Mathe
 <figcaption>Fig 3. Blazegraph Workbench Output for the Query 3 part of NSF 2019 Doctoral Recipients Survey Results Table 3 </figcaption> 
 </figure>
 </li>
+</ul>
+</content>
 <hr>
 
-<li id="#question4"><strong>General</strong>: Institute with the most doctoral students in a given field of study. How many of those were from their marginalized community?
+<article class="mb-5" id="question4">
+
+<content>
+<ul>
+<li><strong>General</strong>: Institute with the most doctoral students in a given field of study. How many of those were from their marginalized community?
 <ul type = "circle">
 <li><strong>Example</strong>: How many female doctoral recipients in 2019 were from University of California Berkeley, in Mathematics and Computer Science graduate program?
 <pre>
@@ -122,9 +140,15 @@ FILTER (?Institute = "UniversityOfCaliforniaBerkeley" && ?OfferedDegree = "Mathe
 <figcaption>Fig 4. Blazegraph Workbench Output for the Query 4. Combined data points frompart of NSF 2019 Doctoral Recipients Survey Results Table 3 and 4.  </figcaption>
 </figure>
 </li>
+</ul>
+</content>
 <hr>
 
-<li><strong id="#question5">General</strong>: The percentage of <marginalized group> doctoral recipients in a particular program or the institute in a given year? (response provided rounded of to nearest integer). This could also be used to compare the <marginalized community> percentages among programs or institutes.
+<article class="mb-5" id="question5">
+
+<content>
+<ul>
+<li><strong>General</strong>: The percentage of <marginalized group> doctoral recipients in a particular program or the institute in a given year? (response provided rounded of to nearest integer). This could also be used to compare the <marginalized community> percentages among programs or institutes.
 <ul type = "circle">
 <li><strong>Example</strong>: What was the percentage of female doctoral recipients from University of California, Berkeley and Walden University in 2019? 
 <pre>
@@ -153,6 +177,6 @@ FILTER (?Institute = "WaldenUniversity")
 </figure>
 </li>
 
-</ol>
+</ul>
 
 </content>
