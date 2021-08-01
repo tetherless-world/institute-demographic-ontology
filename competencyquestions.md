@@ -23,19 +23,19 @@ title: Competency Questions
   </tr>
   <tr>
     <td><a href="#question2">(Q2).</a>US institute that graduated the most doctorates in a given year and the binary gender representation of those students. For example, what is the US Institute with the maximum doctoral recipients in 2019 and how many of them were females?</td>
-    <td>The institute's name with highest number of doctoral recipients. <br>The number of institiute's doctoral recipients from the required binary gender.</td>
+    <td>The institute's name with highest number of doctoral recipients. The number of institiute's doctoral recipients from the required binary gender.</td>
   </tr>
   <tr>
-    <td><a href="#question3">(Q3).Number of &lt;marginalized community&gt; doctoral recipients from institutes at a given location. For example, provide the number of female doctoral recipients from institutes in California.</td>
-    <td>Name of doctoral granting institutes at the provided location. <br>Total doctoral recipients from those institutes for year 2019. <br>Number of those students from the required marginalized community. <br>Source of information can also be provided. </td>
+	  <td><a href="#question3">(Q3).</a>Number of &lt;marginalized community&gt; doctoral recipients from institutes at a given location. For example, provide the number of female doctoral recipients from institutes in California.</td>
+    <td>Name of doctoral granting institutes at the provided location. Total doctoral recipients from those institutes for year 2019. Number of those students from the required marginalized community. <br>Source of information can also be provided. </td>
   </tr>
   <tr>
     <td><a href="#question4">(Q4).</a>Institute with the most doctoral students in a given field of study. How many of those were from their marginalized community? For example, how many female doctoral recipients in 2019 were from University of California Berkeley, in Mathematics and Computer Science graduate program?</td>
-    <td>Institute's name with maximum doctoral recipient from the required field of study. <br>The number of total doctoral recipient and doctorates from that field. <br>The number of students from the required marginalized community in the field of study. <br>This query integrates datapoints from multiple NSF tables and the source of information can be provided.</td>
+    <td>Institute's name with maximum doctoral recipient from the required field of study. The number of total doctoral recipient and doctorates from that field. The number of students from the required marginalized community in the field of study. This query integrates datapoints from multiple NSF tables and the source of information can be provided.</td>
   </tr>
   <tr>
     <td><a href="#question5">(Q5).</a>The percentage of &lt;marginalized group&gt; doctoral recipients in a particular institute or its program in a given year? (response provided rounded of to nearest integer). This could also be used to compare the &lt;marginalized community&gt; percentages among programs or institutes. For example, what was the percentage of female doctoral recipients from University of California, Berkeley and Walden University in 2019? </td>
-	<td>Institute's name, overall total doctoral recipient from the institute or from its mentioned programs. <br>Number of these doctoral recipients from the required marginalized community and the percentage (currently nearest integer). <br>The source of information can also be extracted.  </td>
+	<td>Institute's name, overall total doctoral recipient from the institute or from its mentioned programs. Number of these doctoral recipients from the required marginalized community and the percentage (currently nearest integer). The source of information can also be extracted.  </td>
   </tr>
 </tbody>
 </table>
