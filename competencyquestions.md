@@ -164,23 +164,23 @@ WHERE{
   <ul type = "circle">
     <li> <strong>Query:</strong> <br/>
       <pre>
-			prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
-			prefix sio:<http://semanticscience.org/resource/>
+prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
+prefix sio:<http://semanticscience.org/resource/>
 
-			SELECT DISTINCT ?Institute ?TotDocRec?FemaleInDegree ?PerFemaleDR
-			WHERE{ 
-			  BIND (xsd:integer((?FemaleInDegree/?TotDocRec)*100) AS ?PerFemaleDR) .
-			  ?i rdf:type indo:Institute.
-			  ?i indo:hadDoctoralRecipients ?v.
-			  ?i indo:name ?Institute .
-			  ?i indo:hadDoctoralRecipients ?dr .
-			  ?dr sio:SIO_000300 ?TotDocRec .
-			  ?i indo:hasDemographics ?d .
-			  ?d rdf:type indo:Female .
-			  ?d sio:SIO_000300 ?FemaleInDegree .
-			  FILTER (?Institute = "UniversityOfCaliforniaBerkeley" || ?Institute = "WaldenUniversity")
-			  
-			}
+SELECT DISTINCT ?Institute ?TotDocRec?FemaleInDegree ?PerFemaleDR
+WHERE{ 
+  BIND (xsd:integer((?FemaleInDegree/?TotDocRec)*100) AS ?PerFemaleDR) .
+  ?i rdf:type indo:Institute.
+  ?i indo:hadDoctoralRecipients ?v.
+  ?i indo:name ?Institute .
+  ?i indo:hadDoctoralRecipients ?dr .
+  ?dr sio:SIO_000300 ?TotDocRec .
+  ?i indo:hasDemographics ?d .
+  ?d rdf:type indo:Female .
+  ?d sio:SIO_000300 ?FemaleInDegree .
+  FILTER (?Institute = "UniversityOfCaliforniaBerkeley" || ?Institute = "WaldenUniversity")
+
+}
       </pre>
 	 </li>
   </ul>
