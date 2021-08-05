@@ -35,6 +35,10 @@ title: Institute Demographic Ontology (InDO)
     <td><a href="ontology">Institute Demographic Ontology</a> </td> 
   </tr>
   <tr>
+    <td>Knowledge Graph</td>
+    <td><a href="ontology">Institute Demographic Ontology Individuals</a> </td> 
+  </tr>
+  <tr>
     <td>Demographics</td>
     <td><a href="modeling#demographics">Modeling</a> </td> 
   </tr>
