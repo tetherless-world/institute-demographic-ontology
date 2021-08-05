@@ -1,0 +1,1207 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/neha/2021/indo#"
+     xml:base="http://www.semanticweb.org/neha/2021/indo"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:sio="http://semanticscience.org/resource"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:indo="http://www.semanticweb.org/neha/2021/indo#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:indo1="http://www.semanticweb.org/neha/ontologies/2021/5/indo#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:sio-release="http://semanticscience.org/ontology/sio/v1.51/sio-release.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/neha/2021/indo">
+        <owl:imports rdf:resource="http://semanticscience.org/ontology/sio/v1.51/sio-release.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <dc:creator>Neha Keshan</dc:creator>
+        <dc:description>An ontology demonstrating an Institute&apos;s Doctoral Recipients Demographics and their post graduate plans. One of its other usage is to provide NSF doctoral survey results in a readable format.</dc:description>
+        <rdfs:label>Institute Demographic Ontology (InDO)</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#forTheYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#forTheYear">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Rank"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/neha/2021/indo#Year"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#hadDoctoralRecipients -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#hadDoctoralRecipients">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Year"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/neha/2021/indo#DoctoralRecipients"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#hasCurrentStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#hasCurrentStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#hasDemographics -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#hasDemographics">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#FieldOfStudy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Institute"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/neha/2021/indo#Demographic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#hasDoctoralRecipientsRankBySex -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#hasDoctoralRecipientsRankBySex">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Institute"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/neha/2021/indo#RankByDoctoralRecipientsSex"/>
+    </owl:ObjectProperty>
+    
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#hasPart">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#NSF_Table"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/neha/2021/indo#DoctoralRecipients"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#hasPostGraduatePlan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#hasPostGraduatePlan">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/neha/2021/indo#PostGraduatePlans"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#hasRank -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#hasRank">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Institute"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/neha/2021/indo#Rank"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#isEnrolledIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#isEnrolledIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/neha/2021/indo#Institute"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#isLocatedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#isLocatedAt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Institute"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/neha/2021/indo#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#offersGradDegreeIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#offersGradDegreeIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Institute"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/neha/2021/indo#FieldOfStudy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#publishedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#publishedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#NSF_Table"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/neha/2021/indo#Year"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/ontologies/2021/5/indo#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/neha/ontologies/2021/5/indo#hasPart"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000300 -->
+
+    <owl:DatatypeProperty rdf:about="http://semanticscience.org/resource/SIO_000300">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Demographic"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#DoctoralRecipients"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#FieldOfStudy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#PostGraduatePlans"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Rank"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Year"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#firstName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#hasRank -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#hasRank">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#inCity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#inCity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#inState -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#inState">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Location"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#instituteId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#instituteId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Institute"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#lastName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#FieldOfStudy"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Institute"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#NSF_Table"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#studentId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#studentId">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#wasEstablishedIn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/neha/2021/indo#wasEstablishedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/neha/2021/indo#Institute"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Academe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Academe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Sector"/>
+        <rdfs:label>Academe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Activity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#PostGraduatePlans"/>
+        <rdfs:label>Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#AerospaceAeronauticalAndAstronautical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#AerospaceAeronauticalAndAstronautical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Engineering"/>
+        <rdfs:label>Aerospace Aeronautical and Astronautical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Age -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Age">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Demographic"/>
+        <rdfs:label>Age</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#AgriculturalSciencesAndNaturalResources -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#AgriculturalSciencesAndNaturalResources">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#LifeSciences"/>
+        <rdfs:label>Agricultural Sciences and Natural Resources</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#AmericanIndianOrAlaskanNative -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#AmericanIndianOrAlaskanNative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#NotHispanicOrLatino"/>
+        <rdfs:label>American Indian or Alaskan Native</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Anthropology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Anthropology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#PsychologyAndSocialSciences"/>
+        <rdfs:label>Anthropology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Arts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Arts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#HumanitiesAndArts"/>
+        <rdfs:label>Arts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Asian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Asian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#NotHispanicOrLatino"/>
+        <rdfs:label>Asian</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#BioengineeringAndBiomedical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#BioengineeringAndBiomedical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Engineering"/>
+        <rdfs:label>Bioengineering and Biomedical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#BiologicalAndBiomedicalSciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#BiologicalAndBiomedicalSciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#LifeSciences"/>
+        <rdfs:label>Biological and Biomedical Sciences</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#BlackOrAfricanAmerican -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#BlackOrAfricanAmerican">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#NotHispanicOrLatino"/>
+        <rdfs:label>Black or African American</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#BusinessManagementAndAdministration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#BusinessManagementAndAdministration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Other"/>
+        <rdfs:label>Business Management and Administration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Chemical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Chemical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Engineering"/>
+        <rdfs:label>Chemical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Chemistry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Chemistry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#PhysicalScienceAndEarthSciences"/>
+        <rdfs:label>Chemistry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#CitizenshipStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#CitizenshipStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Demographic"/>
+        <rdfs:label>Citizenship Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#City">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Location"/>
+        <rdfs:label>City</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Civil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Civil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Engineering"/>
+        <rdfs:label>Civil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#CognitiveLimitations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#CognitiveLimitations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#FunctionalLimitations"/>
+        <rdfs:label>Cognitive Limitations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Communication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Communication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Other"/>
+        <rdfs:label>Communication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#ComputerAndInformationSciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#ComputerAndInformationSciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#MathematicsAndComputerSciences"/>
+        <rdfs:label>Computer and Information Sciences</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Demographic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Demographic">
+        <rdfs:label>Demographics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#DoctoralRecipients -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#DoctoralRecipients">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Institute"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Economics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Economics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#PsychologyAndSocialSciences"/>
+        <rdfs:label>Economics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Education -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Education">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#FieldOfStudy"/>
+        <rdfs:label>Education</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#EducationAdministration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#EducationAdministration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Education"/>
+        <rdfs:label>Education Administration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#EducationResearch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#EducationResearch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Education"/>
+        <rdfs:label>Education Research</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#ElectricalElectronicsAndCommunications -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#ElectricalElectronicsAndCommunications">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Engineering"/>
+        <rdfs:label>Electrical Electronics and Communications</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Engineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Engineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#FieldOfStudy"/>
+        <rdfs:label>Engineering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#EthnicityAndRace -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#EthnicityAndRace">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Demographic"/>
+        <rdfs:label>Ethnicity and Race</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#EthnicityNotReported -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#EthnicityNotReported">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#EthnicityAndRace"/>
+        <rdfs:label>Ethnicity Not Reported</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Female -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Female">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Sex"/>
+        <rdfs:label>Female</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#FieldOfStudy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#FieldOfStudy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Institute"/>
+        <rdfs:label>Field of Study</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#ForeignLanguagesAndLiterature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#ForeignLanguagesAndLiterature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#HumanitiesAndArts"/>
+        <rdfs:label>Foreign Languages and Literature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#FunctionalLimitations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#FunctionalLimitations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Demographic"/>
+        <rdfs:label>Functional Limitations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#GeosciencesAtmosphericSciencesAndOceanSciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#GeosciencesAtmosphericSciencesAndOceanSciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#PhysicalScienceAndEarthSciences"/>
+        <rdfs:label>Geo Sciences, Atmospheric Sciences and Ocean Sciences</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Government -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Government">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Sector"/>
+        <rdfs:label>Government</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#HealthSciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#HealthSciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#LifeSciences"/>
+        <rdfs:label>Health Sciences</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#HearingLimitations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#HearingLimitations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#FunctionalLimitations"/>
+        <rdfs:label>Hearing Limitations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#HispanicOrLatino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#HispanicOrLatino">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#EthnicityAndRace"/>
+        <rdfs:label>Hispanic or Latino</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#History -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#History">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#HumanitiesAndArts"/>
+        <rdfs:label>History</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Humanities -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Humanities">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#HumanitiesAndArts"/>
+        <rdfs:label>Humanities</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#HumanitiesAndArts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#HumanitiesAndArts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#FieldOfStudy"/>
+        <rdfs:label>Humanities and Arts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#IndustrialAndManufacturing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#IndustrialAndManufacturing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Engineering"/>
+        <rdfs:label>Industrial and Manufacturing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#IndustryOrBusiness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#IndustryOrBusiness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Sector"/>
+        <rdfs:label>Industry or Business</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Institute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Institute"/>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Letters -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Letters">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#HumanitiesAndArts"/>
+        <rdfs:label>Letters</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#LifeSciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#LifeSciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Science"/>
+        <rdfs:label>Life Sciences</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#LiftingLimitations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#LiftingLimitations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#FunctionalLimitations"/>
+        <rdfs:label>Lifting Limitations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Location">
+        <rdfs:label>Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Male -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Male">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Sex"/>
+        <rdfs:label>Male</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#ManagementOrAdministration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#ManagementOrAdministration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Role"/>
+        <rdfs:label>Management or Administration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#MaterialsScience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#MaterialsScience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Engineering"/>
+        <rdfs:label>Materials Science</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#MathematicsAndComputerSciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#MathematicsAndComputerSciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Science"/>
+        <rdfs:label>Mathematics and Computer Sciences</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#MathematicsAndStatistics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#MathematicsAndStatistics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#MathematicsAndComputerSciences"/>
+        <rdfs:label>Mathematics and Statistics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#MultiRacial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#MultiRacial">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#NotHispanicOrLatino"/>
+        <rdfs:label>Multi Racial</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#NSF_Table -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#NSF_Table">
+        <rdfs:label>NSF Table</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#NonProfitOrganization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#NonProfitOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Sector"/>
+        <rdfs:label>Non Profit Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#NotHispanicOrLatino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#NotHispanicOrLatino">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#EthnicityAndRace"/>
+        <rdfs:label>Not Hispanic or Latino</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#OneOrMoreLimitationsOfAnyType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#OneOrMoreLimitationsOfAnyType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#FunctionalLimitations"/>
+        <rdfs:label>One or More Limitations of Any Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Other -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Other">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#FieldOfStudy"/>
+        <rdfs:label>Other</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#OtherEducation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#OtherEducation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Education"/>
+        <rdfs:label>Other Education</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#OtherEngineering -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#OtherEngineering">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Engineering"/>
+        <rdfs:label>Other Engineering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#OtherHumanitiesAndArts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#OtherHumanitiesAndArts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#HumanitiesAndArts"/>
+        <rdfs:label>Other Humanities and Arts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#OtherOrUnknown -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#OtherOrUnknown">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Sector"/>
+        <rdfs:label>Other or Unknown</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#OtherRaceOrNotReported -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#OtherRaceOrNotReported">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#NotHispanicOrLatino"/>
+        <rdfs:label>Other Race or Not Reported</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#OtherSocialSciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#OtherSocialSciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#PsychologyAndSocialSciences"/>
+        <rdfs:label>Other Social Sciences</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Others -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Others">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Role"/>
+        <rdfs:label>Others</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#PhysicalAstronomy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#PhysicalAstronomy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#PhysicalScienceAndEarthSciences"/>
+        <rdfs:label>Physical Astronomy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#PhysicalScienceAndEarthSciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#PhysicalScienceAndEarthSciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Science"/>
+        <rdfs:label>Physical Sciences and Earth Sciences</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#PoliticalScienceAndGovernment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#PoliticalScienceAndGovernment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#PsychologyAndSocialSciences"/>
+        <rdfs:label>Political Science and Government</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#PostGraduatePlans -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#PostGraduatePlans">
+        <rdfs:label>Post Graduate Plans</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Primary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Primary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Activity"/>
+        <rdfs:label>Primary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#ProfessionalServices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#ProfessionalServices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Role"/>
+        <rdfs:label>Professional Services</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Psychology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Psychology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#PsychologyAndSocialSciences"/>
+        <rdfs:label>Psychology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#PsychologyAndSocialSciences -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#PsychologyAndSocialSciences">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Science"/>
+        <rdfs:label>Psychology and Social Sciences</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Rank -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Rank">
+        <rdfs:label>Rank</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#RankByDoctoralRecipientsSex -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#RankByDoctoralRecipientsSex">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Rank"/>
+        <rdfs:label>Rank by Doctoral Recipients by Sex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#RankByLifeSciencesDoctoralRecipientsSex -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#RankByLifeSciencesDoctoralRecipientsSex">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Rank"/>
+        <rdfs:label>Rank by Life Sciences Doctoral Recipients by Sex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Role">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#PostGraduatePlans"/>
+        <rdfs:label>Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Science -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Science">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#FieldOfStudy"/>
+        <rdfs:label>Science</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Secondary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Secondary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Activity"/>
+        <rdfs:label>Secondary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Sector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Sector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#PostGraduatePlans"/>
+        <rdfs:label>Sector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Sex -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Sex">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Demographic"/>
+        <rdfs:label>Sex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Sociology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Sociology">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#PsychologyAndSocialSciences"/>
+        <rdfs:label>Sociology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#State">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Location"/>
+        <rdfs:label>State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Student">
+        <rdfs:label>Student</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Table1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Table1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#NSF_Table"/>
+        <rdfs:label>NSF Table 1</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Table3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Table3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#NSF_Table"/>
+        <rdfs:label>NSF Table 3</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Table4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Table4">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#NSF_Table"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#TeacherEducation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#TeacherEducation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Education"/>
+        <rdfs:label>Teacher Education</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Teaching -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Teaching">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Role"/>
+        <rdfs:label>Teaching</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#TeachingFields -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#TeachingFields">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Education"/>
+        <rdfs:label>Teaching Fields</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#TemporaryVisaHolder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#TemporaryVisaHolder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#CitizenshipStatus"/>
+        <rdfs:label>Temporary Visa Holder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#UScitizenOrPermanentResident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#UScitizenOrPermanentResident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#CitizenshipStatus"/>
+        <rdfs:label>US Citizen or Permanent Resident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#UnknownField -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#UnknownField">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Other"/>
+        <rdfs:label>Unknown Fields</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#VisualLimitations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#VisualLimitations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#FunctionalLimitations"/>
+        <rdfs:label>Visual Limitations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#WalkingLimitations -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#WalkingLimitations">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#FunctionalLimitations"/>
+        <rdfs:label>Walking Limitations</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#White -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#White">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#NotHispanicOrLatino"/>
+        <rdfs:label>White</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#Year -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#Year">
+        <rdfs:label>Year</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#NonS&amp;EFieldsNec -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#NonS&amp;EFieldsNec">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Other"/>
+        <rdfs:label>Non-Science and Engineering Fields nec</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/neha/2021/indo#R&amp;D -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/neha/2021/indo#R&amp;D">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/neha/2021/indo#Role"/>
+        <rdfs:label>Research and Development (R&amp;D)</rdfs:label>
+    </owl:Class>
+ 
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

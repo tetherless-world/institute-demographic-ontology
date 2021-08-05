@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1627537534268" name="http://www.semanticweb.org/neha/2021/indo" uri="indo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1628181526219" name="http://www.semanticweb.org/neha/2021/indo" uri="indo_ont.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1628181526219" name="http://www.semanticweb.org/neha/2021/indo_individual" uri="indo_indi.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1628181526219" name="duplicate:http://www.semanticweb.org/neha/ontologies/2021/5/indo" uri="backup_2_indo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1628181526219" name="duplicate:http://www.semanticweb.org/neha/ontologies/2021/5/indo" uri="Indo1_backup.owl"/>
     </group>
 </catalog>
