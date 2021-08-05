@@ -48,6 +48,7 @@ title: Competency Questions
     <li> <strong>Query:</strong> <br/>
       <pre>
 prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
+prefix indoi: <http://www.semanticweb.org/neha/2021/indo_individual#>
 prefix sio:<http://semanticscience.org/resource/>
 
 SELECT DISTINCT ?Year ?DoctoralRecipients ?NSFTable
@@ -55,12 +56,12 @@ WHERE {
   indo:Year ?p ?o .
   ?s rdf:type indo:Year .
   ?s sio:SIO_000300 ?Year .
-  ?s indo:hadDoctoralRecipients ?b .
+  ?s indoi:hadDoctoralRecipients ?b .
   ?b sio:SIO_000300 ?DoctoralRecipients .
-  ?c indo:hasPart ?b .
+  ?c indoi:hasPart ?b .
   ?c rdfs:label ?NSFTable .
   FILTER ((?Year >1959 && ?Year <1963) || (?Year >2015 && ?Year <2020))
-  }
+}
       </pre>
 	 </li>
   </ul>
@@ -76,16 +77,20 @@ WHERE {
     <li> <strong>Query:</strong> <br/>
       <pre>
 prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
+prefix indoi: <http://www.semanticweb.org/neha/2021/indo_individual#>
 prefix sio:<http://semanticscience.org/resource/>
 
-SELECT DISTINCT ?Institute ?Rank ?TotalDoctoralRecipients
+SELECT DISTINCT ?Institute ?Rank ?TotalDoctoralRecipients ?Female
 WHERE{
-  ?s rdf:type indo:Institute.
-  ?s indo:hasDoctoralRecipientsRankBySex ?o .
-  ?s indo:name ?Institute.
-  ?o sio:SIO_000300 ?Rank .
-  ?s indo:hadDoctoralRecipients ?v.
+  ?i rdf:type indo:Institute.
+  ?i indoi:hasDoctoralRecipientsRankBySex ?r .
+  ?i indoi:name ?Institute.
+  ?r sio:SIO_000300 ?Rank .
+  ?i indoi:hadDoctoralRecipients ?v.
   ?v sio:SIO_000300 ?TotalDoctoralRecipients .
+  ?i indoi:hasDemographics ?d .
+  ?d rdf:type indo:Female .
+  ?d sio:SIO_000300 ?Female .
   Filter(?Rank=1)
 }
       </pre>
@@ -103,20 +108,20 @@ WHERE{
     <li> <strong>Query:</strong> <br/>
       <pre>
 prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
+prefix indoi: <http://www.semanticweb.org/neha/2021/indo_individual#>
 prefix sio:<http://semanticscience.org/resource/>
 
-SELECT DISTINCT ?Institute ?OfferedDegree ?TotalInDegree ?FemaleInDegree
+SELECT DISTINCT ?Institute ?TotalDoctoralRecipients ?Female
 WHERE{ 
   ?i rdf:type indo:Institute.
-  ?i indo:hadDoctoralRecipients ?v.
-  ?i indo:name ?Institute .
-  ?i indo:offersGradDegreeIn ?g .
-  ?g indo:name ?OfferedDegree .
-  ?g sio:SIO_000300 ?TotalInDegree .
-  ?g indo:hasDemographics ?d .
+  ?i indoi:inState ?s.
+  ?i indoi:hadDoctoralRecipients ?dr.
+  ?dr sio:SIO_000300 ?TotalDoctoralRecipients .
+  ?i indoi:name ?Institute .
+  ?i indoi:hasDemographics ?d .
   ?d rdf:type indo:Female .
-  ?d sio:SIO_000300 ?FemaleInDegree .
-  FILTER (?Institute = "UniversityOfCaliforniaBerkeley" && ?OfferedDegree = "MathematicsAndComputerScience")  
+  ?d sio:SIO_000300 ?Female .
+  FILTER(?s = "California")
 }
       </pre>
 	 </li>
@@ -133,18 +138,19 @@ WHERE{
     <li> <strong>Query:</strong> <br/>
       <pre>
 prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
+prefix indoi: <http://www.semanticweb.org/neha/2021/indo_individual#>
 prefix sio:<http://semanticscience.org/resource/>
 
 SELECT DISTINCT ?Institute ?TotDocRec ?OfferedDegree ?TotalInDegree ?FemaleInDegree
 WHERE{ 
   ?i rdf:type indo:Institute.
-  ?i indo:hadDoctoralRecipients ?v.
+  ?i indoi:hadDoctoralRecipients ?v.
   ?v sio:SIO_000300 ?TotDocRec .
-  ?i indo:name ?Institute .
-  ?i indo:offersGradDegreeIn ?g .
-  ?g indo:name ?OfferedDegree .
+  ?i indoi:name ?Institute .
+  ?i indoi:offersGradDegreeIn ?g .
+  ?g indoi:name ?OfferedDegree .
   ?g sio:SIO_000300 ?TotalInDegree .
-  ?g indo:hasDemographics ?d .
+  ?g indoi:hasDemographics ?d .
   ?d rdf:type indo:Female .
   ?d sio:SIO_000300 ?FemaleInDegree .
   FILTER (?Institute = "UniversityOfCaliforniaBerkeley" && ?OfferedDegree = "MathematicsAndComputerScience")  
@@ -165,21 +171,20 @@ WHERE{
     <li> <strong>Query:</strong> <br/>
       <pre>
 prefix indo: <http://www.semanticweb.org/neha/2021/indo#>
+prefix indoi: <http://www.semanticweb.org/neha/2021/indo_individual#>
 prefix sio:<http://semanticscience.org/resource/>
 
 SELECT DISTINCT ?Institute ?TotDocRec?FemaleInDegree ?PerFemaleDR
 WHERE{ 
   BIND (xsd:integer((?FemaleInDegree/?TotDocRec)*100) AS ?PerFemaleDR) .
   ?i rdf:type indo:Institute.
-  ?i indo:hadDoctoralRecipients ?v.
-  ?i indo:name ?Institute .
-  ?i indo:hadDoctoralRecipients ?dr .
+  ?i indoi:name ?Institute .
+  ?i indoi:hadDoctoralRecipients ?dr .
   ?dr sio:SIO_000300 ?TotDocRec .
-  ?i indo:hasDemographics ?d .
+  ?i indoi:hasDemographics ?d .
   ?d rdf:type indo:Female .
   ?d sio:SIO_000300 ?FemaleInDegree .
   FILTER (?Institute = "UniversityOfCaliforniaBerkeley" || ?Institute = "WaldenUniversity")
-
 }
       </pre>
 	 </li>
