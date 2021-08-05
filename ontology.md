@@ -16,7 +16,8 @@ title: Institute Demographic Ontology
   
    <h3 id="ontologylinks">Ontology Links</h3>
   <ul>
-   <li>Ontology can be accessed from <a href="https://raw.githubusercontent.com/tetherless-world/institute-demographic-ontology/website/Ontology/indo.owl">https://raw.githubusercontent.com/tetherless-world/institute-demographic-ontology/website/Ontology/indo.owl</a></li>
+   <li>InDO can be accessed from <a href="https://raw.githubusercontent.com/tetherless-world/institute-demographic-ontology/main/Ontology/indo_ont.owl">https://raw.githubusercontent.com/tetherless-world/institute-demographic-ontology/main/Ontology/indo_ont.owl</a></li>
+   <li>InDO instances can be accessed from <a href="https://raw.githubusercontent.com/tetherless-world/institute-demographic-ontology/main/Ontology/indo_indi.owl">https://raw.githubusercontent.com/tetherless-world/institute-demographic-ontology/main/Ontology/indo_indi.owl</a></li>
   </ul>
   
   <article class="mb-5" id="ontologymetadata">
@@ -60,9 +61,14 @@ title: Institute Demographic Ontology
     <td> <a href="http://www.w3.org/2004/02/skos/core#"></a>  Simple Knowledge Organization System</td> 
   </tr>
     <tr>
-    <td>eo</td>
+    <td>indo</td>
     <td> <a href="https://raw.githubusercontent.com/tetherless-world/institute-demographic-ontology/website/Ontology/indo.owl"> Institute Demographic Ontology</a> </td> 
-  </tr>   
+  </tr>
+   </tr>
+    <tr>
+    <td>indoi</td>
+    <td> <a href="https://raw.githubusercontent.com/tetherless-world/institute-demographic-ontology/main/Ontology/indo_indi.owl"> Institute Demographic Ontology Instances</a> </td> 
+  </tr>  
     <tr>
     <td>sio</td>
     <td> <a href="http://semanticscience.org/resource/">SemanticScience Integrated Ontology</a> </td> 
