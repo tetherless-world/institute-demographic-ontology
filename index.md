@@ -59,6 +59,8 @@ title: Institute Demographic Ontology (InDO)
  </ul>
  </content>
  
+  <hr/>
+ 
  <article class="mb-5" id="toolsused">
 <content>
 <h2> Publications</h2>
