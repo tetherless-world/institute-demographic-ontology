@@ -23,7 +23,11 @@ title: Modeling Snippets
   <caption id="fig3">Fig 3. A conceptual overview of our Institute Demographic Ontology's institute class. The arrows depict the subclass relationship between classes while the dashed arrows depict the property association between two classes.</caption>
   
   <h3 id="demographics"> Demographic Modeling </h3>
-  <p class="message"></p>
+  <p class="message">Our demographic class (indo:Demographics) modeling is based on our definition of the term 'marginalized' and on the terminology used in the published NSF results. For this study, the term 'marginalized' is defined as a group of students excluded based on ethnicity, race, linguistics, gender identity, age, physical ability, and/or immigration status. <a href="#fig4">Figure. 4</a> represents the three levels of component hierarchies of demographics included in the ontology.</p>
+ 
+  <img src="../images/institute.png" style="width:100%; height:100%"/>  
+  <caption id="fig4">Fig 4. A conceptual overview of the class Demographic depicting the subclass hierarchies. The different colors represent the classes in the same hierarchy.</caption>
+  
  
  <h3 id="finefield"> Fine Field of Study Modeling </h3>
   <p class="message"></p>
