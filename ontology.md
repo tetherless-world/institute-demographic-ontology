@@ -64,7 +64,6 @@ title: Institute Demographic Ontology
     <td>indo</td>
     <td> <a href="https://raw.githubusercontent.com/tetherless-world/institute-demographic-ontology/website/Ontology/indo.owl"> Institute Demographic Ontology</a> </td> 
   </tr>
-   </tr>
     <tr>
     <td>indoi</td>
     <td> <a href="https://raw.githubusercontent.com/tetherless-world/institute-demographic-ontology/main/Ontology/indo_indi.owl"> Institute Demographic Ontology Instances</a> </td> 
