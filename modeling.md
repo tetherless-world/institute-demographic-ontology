@@ -3,7 +3,7 @@ layout: default
 title: Modeling Snippets
 ---
 
-[Institute Modeling](#institute) | [Demographic Modeling](#demographics) |  [Fine Field of Study Modeling](#finefield) |  [Provenance Modeling](#Provenance)
+[Institute Modeling](#institute) | [Demographic Modeling](#demographics) |  [Fine Field of Study Modeling](#finefield) |  [Provenance Modeling](#provenance)
 
 <article class="mb-5" id="modeling">
 <content>
@@ -36,7 +36,7 @@ title: Modeling Snippets
   <caption id="fig5">Fig 5. A conceptual overview of class Science (part of the third-level hierarchy of our ontology) representing the subclass relationship. Colors represents classes of the same hierarchy level.</caption>
   
  <h3 id="provenance">Provenance</h3>
- <p class="message">With all kinds of information available all over the web, it is vital to know the source of the information. Ontologies and knowledge graphs provide a mechanism to maintain provenance, hence we leverage this feature for our ontology InDO. For example, every data point taken from the NSF 2019 Doctoral Recipient Survey results has the corresponding table number and the year added to it (as seen in our <a href="nsfexample">Use case</a>), providing the source point for the provided demographic and post-doctorate mobility statistics.</p>
+ <p class="message">With all kinds of information available all over the web, it is vital to know the source of the information. Ontologies and knowledge graphs provide a mechanism to maintain provenance, hence we leverage this feature for our ontology InDO. For example, every data point taken from the NSF 2019 Doctoral Recipient Survey results has the corresponding table number and the year added to it (as seen in our <a href="usecase">Use case</a>), providing the source point for the provided demographic and post-doctorate mobility statistics.</p>
  
  </content>
  
