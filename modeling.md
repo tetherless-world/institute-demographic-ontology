@@ -25,15 +25,18 @@ title: Modeling Snippets
   <h3 id="demographics"> Demographic Modeling </h3>
   <p class="message">Our demographic class (indo:Demographics) modeling is based on our definition of the term 'marginalized' and on the terminology used in the published NSF results. For this study, the term 'marginalized' is defined as a group of students excluded based on ethnicity, race, linguistics, gender identity, age, physical ability, and/or immigration status. <a href="#fig4">Figure. 4</a> represents the three levels of component hierarchies of demographics included in the ontology.</p>
  
-  <img src="../images/institute.png" style="width:100%; height:100%"/>  
+  <img src="../images/demographic.png" style="width:100%; height:100%"/>  
   <caption id="fig4">Fig 4. A conceptual overview of the class Demographic depicting the subclass hierarchies. The different colors represent the classes in the same hierarchy.</caption>
   
  
  <h3 id="finefield"> Fine Field of Study Modeling </h3>
   <p class="message">To help a student from a marginalized community find specific information regarding a particular program, it is important for our ontology to be as specific as possible. We therefore divide the entire field of study (indo:FieldOfStudy) into the major domains inspired by the terminology used in the published NSF results - Science, Engineering, Humanities and Arts, Education and Others. Each of these is then divided into broad field of study which is further sorted based on fine field of study. The created structure provides a three-level hierarchy to accommodate the maximum possible number of graduate programs offered by an institute. For example, Life Science (indo:LifeSciences), a broad field of study, becomes a part of the science domain (indo:Science), and can have biological and biomedical sciences (indo:BiologicalAndBiomedicalSciences) or agricultural sciences (indo:AgriculturalSciences) as its fine fields. A conceptual overview for Science domain is represented in <a href="#fig5">Figure. 5</a>.</p>
  
- <img src="../images/institute.png" style="width:100%; height:100%"/>  
+ <img src="../images/science.png" style="width:100%; height:100%"/>  
   <caption id="fig5">A conceptual overview of class Science (part of the third-level hierarchy of our ontology) representing the subclass relationship. Colors represents classes of the same hierarchy level.</caption>
+  
+ <h3 id="provenance">Provenance</h3>
+ <p class="message">With all kinds of information available all over the web, it is vital to know the source of the information. Ontologies and knowledge graphs provide a mechanism to maintain provenance, hence we leverage this feature for our ontology InDO. For example, every data point taken from the NSF 2019 Doctoral Recipient Survey results has the corresponding table number and the year added to it, providing the source point for the provided demographic and post-doctorate mobility statistics.</p>
  
  </content>
  
