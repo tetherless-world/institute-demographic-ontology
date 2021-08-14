@@ -5,7 +5,7 @@ title: Modeling Snippets
 
 [Institute Modeling](#institute) | [Demographic Modeling](#demographics) |  [Fine Field of Study](#finefield)
 
-<article class="mb-5" id="modelingsnippets">
+<article class="mb-5" id="modeling">
 <content>
   
   
