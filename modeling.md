@@ -30,7 +30,10 @@ title: Modeling Snippets
   
  
  <h3 id="finefield"> Fine Field of Study Modeling </h3>
-  <p class="message"></p>
+  <p class="message">To help a student from a marginalized community find specific information regarding a particular program, it is important for our ontology to be as specific as possible. We therefore divide the entire field of study (indo:FieldOfStudy) into the major domains inspired by the terminology used in the published NSF results - Science, Engineering, Humanities and Arts, Education and Others. Each of these is then divided into broad field of study which is further sorted based on fine field of study. The created structure provides a three-level hierarchy to accommodate the maximum possible number of graduate programs offered by an institute. For example, Life Science (indo:LifeSciences), a broad field of study, becomes a part of the science domain (indo:Science), and can have biological and biomedical sciences (indo:BiologicalAndBiomedicalSciences) or agricultural sciences (indo:AgriculturalSciences) as its fine fields. A conceptual overview for Science domain is represented in <a href="#fig5">Figure. 5</a>.</p>
+ 
+ <img src="../images/institute.png" style="width:100%; height:100%"/>  
+  <caption id="fig5">A conceptual overview of class Science (part of the third-level hierarchy of our ontology) representing the subclass relationship. Colors represents classes of the same hierarchy level.</caption>
  
  </content>
  
