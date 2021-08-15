@@ -44,7 +44,7 @@ title: Institute Demographic Ontology (InDO)
   </tr>
     <tr>
     <td>NSF Doctoral Recipients Survey 2019 Example</td>
-    <td><a href="nsfexample">Use Case</a> </td> 
+    <td><a href="usecase">Use Case</a> </td> 
   </tr>
    <tr>
     <td>Competency Questions </td>
