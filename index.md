@@ -61,17 +61,7 @@ title: Institute Demographic Ontology (InDO)
  
   <hr/>
  
- <article class="mb-5" id="toolsused">
-<content>
-<h2 id="pub"> Publications</h2>
-<ul>
-	<li><strong>[Best WebSci'21 PhD Symposium Presentation]</strong><a href="https://dl.acm.org/doi/fullHtml/10.1145/3462741.3466677">Keshan, N.: Building a social machine for graduate mobility. In: 13th ACM WebScience Conference 2021. pp. 156–157 (2021) </a></li>
-</ul>
 
-</content>
- 
- <hr/>
- 
  <article class="mb-5" id="toolsused">
 <content>
   
