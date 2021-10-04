@@ -7,7 +7,7 @@ title: Competency Questions
 <article class="mb-5" id="competencyquestions">
   
 <h2>Example of Competency Questions</h2>
-  <p>We have crafted a set of competency questions to demonstrate the use of our ontology for aspiring graduate students or someone who would want to use our system for understanding an institute's doctoral recipients demographics. We first present a table of our competency question list and the corresponding candidate responses. We then present SPARQL query implementations for these questions.</p>
+  <p>We have crafted a set of competency questions to demonstrate the use of our ontology for aspiring graduate students or someone who would want to use our system for understanding an institute's doctoral recipients demographics. We first present a table of our competency question list and the corresponding candidate responses. We then present SPARQL query implementations for these questions. Each query is exactly the one used on Blazegraph Workbench to retrieve the demonstrated results; screenshots from the platform.</p>
   <p>In our example, a female student wants to understand the demographic of the doctoral recipients for University of California, Berkeley to make a decision on whether to enroll in their Mathematics and Computer Science doctoral program. </p>
   <table>
 <thead>
