@@ -27,7 +27,6 @@ title: Institute Demographic Ontology
   <h4 id="ontologiesreused">Ontologies Reused</h4>
   <ul>
   <li><a href="https://raw.githubusercontent.com/MaastrichtU-IDS/semanticscience/master/ontology/sio.owl">SemanticScience Integrated Ontology (SIO)</a></li>
-  <li><a href="https://www.w3.org/TR/prov-o/">The Provenance Ontology (PROV-O)</a></li>
   </ul>
     
   <h4> Ontology Prefixes </h4>
